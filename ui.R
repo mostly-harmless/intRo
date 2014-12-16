@@ -50,5 +50,6 @@ shinyUI(
                               
                               
                ),
-               tags$head(tags$link(rel="shortcut icon", href="images/icon.png"))
+               tags$head(tags$link(rel="shortcut icon", href="images/icon.png")),
+               includeCSS("www/additional.css")
     ))
