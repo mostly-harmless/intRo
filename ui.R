@@ -23,7 +23,7 @@ for (i in 1:nrow(module_info)) {
 
 shinyUI(
     navbarPage("intRo", id="top-nav",  theme = "bootstrap.min.css",
-               tabPanel(title="", icon=icon("home"),
+               tabPanel(title="", icon=icon("home", "fa-lg"),
                         fluidRow(
                             dynFrame(outputId = 'print_output'),
                             do.call(navlistPanel, c(list(id = "side-nav", widths = c(2, 10)), mylist))
@@ -35,14 +35,14 @@ shinyUI(
                           )
                         )
                ),
-               tabPanel(title="", value="http://gammarama.github.io/intRo", icon=icon('question-circle')),
-               tabPanel(title="", value="http://github.com/gammarama/intRo", icon=icon("github")),
-               navbarMenu("", icon=icon("envelope"),
+               tabPanel(title="", value="http://gammarama.github.io/intRo", icon=icon('question-circle', "fa-lg")),
+               tabPanel(title="", value="http://github.com/gammarama/intRo", icon=icon("github", "fa-lg")),
+               navbarMenu("", icon=icon("envelope", "fa-lg"),
                           tabPanel("Eric Hare"),
                           tabPanel("Andee Kaplan")),
                tabPanel(title="hide_me"),
-               tabPanel(title="", icon=icon('code'), value = "javascript:$('#myEditor').slideToggle(); $('.fa-code').parent().parent().toggleClass('active'); code_clicked();"),
-               tabPanel(title="", icon=icon("print"), value="javascript: $(this).addClass('print_button'); print_clicked();"),
+               tabPanel(title="", icon=icon('code', "fa-lg"), value = "javascript:$('#myEditor').slideToggle(); $('.fa-code').parent().parent().toggleClass('active'); code_clicked();"),
+               tabPanel(title="", icon=icon("print", "fa-lg"), value="javascript: $(this).addClass('print_button'); print_clicked();"),
                footer=tagList(includeScript("scripts/top-nav-links.js"),
                               includeScript("scripts/print.js"),
                               includeScript("scripts/other-helpers.js")
