@@ -15,7 +15,6 @@ mylist <- list()
 old_heading <- ""
 for (i in 1:nrow(module_info)) {
     if (module_info[i,1] != old_heading) {
-        if (i != 1) mylist[[length(mylist) + 1]] <- "-----"
         mylist[[length(mylist) + 1]] <- as.character(module_info[i,1])
         old_heading <- module_info[i,1]
     }
